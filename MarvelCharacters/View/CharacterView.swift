@@ -38,13 +38,26 @@ struct CharacterView: View {
                         ForEach(comics, id: \.id) { comic in
                             Button {
                             } label: {
-                                VStack {
+                                VStack(alignment: .center) {
                                     AsyncImage(url: URL(string: contentVM.thumbnailURL(for: comic)))
                                         .frame(width: 168, height: 252)
                                         .scaledToFit()
-                                    Text("\(comic.title)")
-                                        .multilineTextAlignment(.center)
-                                        .frame(width: 225)
+                                    HStack {
+                                        Text("\(comic.title)")
+                                            .lineLimit(3)
+                                            .font(.system(size: 14))
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Text("Issue #\(comic.issueNumber)")
+                                            .font(.system(size: 10))
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Text("\(contentVM.onSaleDate(for: comic))")
+                                            .font(.system(size: 10))
+                                        Spacer()
+                                    }
                                }
                                 .padding()
                             }

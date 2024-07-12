@@ -1,0 +1,141 @@
+{
+  "id": 103120,
+  "digitalId": 62364,
+  "title": "Who Is...? M.O.D.O.K. Infinity Comic (2023) #1",
+  "issueNumber": 1,
+  "variantDescription": "",
+  "description": "",
+  "modified": "2023-02-13T01:17:35-0500",
+  "isbn": "",
+  "upc": "75960620274401311",
+  "diamondCode": "",
+  "ean": "",
+  "issn": "",
+  "format": "Digital Vertical Comic",
+  "pageCount": 4,
+  "textObjects": [
+    {
+      "type": "issue_solicit_text",
+      "language": "en-us",
+      "text": "Leader of A.I.M., foe of the Avengers—these are but a fraction of the identifiers that correlate to the Mental Organism Designed Only For Killing. Get ready for re-programming as you submit the query: WHO IS M.O.D.O.K.?"
+    }
+  ],
+  "resourceURI": "http://gateway.marvel.com/v1/public/comics/103120",
+  "urls": [
+    {
+      "type": "detail",
+      "url": "http://marvel.com/comics/issue/103120/who_is._modok_infinity_comic_2023_1?utm_campaign=apiRef&utm_source=9b134f7ef8965bc14e25dafe3004d027"
+    },
+    {
+      "type": "reader",
+      "url": "http://marvel.com/digitalcomics/view.htm?iid=62364&utm_campaign=apiRef&utm_source=9b134f7ef8965bc14e25dafe3004d027"
+    }
+  ],
+  "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/35554",
+    "name": "Who Is...? M.O.D.O.K. Infinity Comic (2023)"
+  },
+  "variants": [],
+  "collections": [],
+  "collectedIssues": [],
+  "dates": [
+    {
+      "type": "onsaleDate",
+      "date": "2023-02-17T00:00:00-0500"
+    },
+    {
+      "type": "focDate",
+      "date": "2023-01-16T00:00:00-0500"
+    },
+    {
+      "type": "unlimitedDate",
+      "date": "2023-02-17T00:00:00-0500"
+    }
+  ],
+  "prices": [
+    {
+      "type": "printPrice",
+      "price": 0
+    }
+  ],
+  "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/00/63bd9786689b9",
+    "extension": "jpg"
+  },
+  "images": [
+    {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/00/63bd9786689b9",
+      "extension": "jpg"
+    }
+  ],
+  "creators": {
+    "available": 5,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/103120/creators",
+    "items": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/12313",
+        "name": "Mark Basso",
+        "role": "editor"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/14120",
+        "name": "Jordan Blum",
+        "role": "writer"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/13280",
+        "name": "Damian Couceiro",
+        "role": "penciller (cover)"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/10172",
+        "name": "Vc Clayton Cowles",
+        "role": "letterer"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/creators/12991",
+        "name": "Rachelle Rosenberg",
+        "role": "colorist"
+      }
+    ],
+    "returned": 5
+  },
+  "characters": {
+    "available": 2,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/103120/characters",
+    "items": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009144",
+        "name": "A.I.M."
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010726",
+        "name": "M.O.D.O.K."
+      }
+    ],
+    "returned": 2
+  },
+  "stories": {
+    "available": 2,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/103120/stories",
+    "items": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/stories/227343",
+        "name": "cover from Who Is…? M.O.D.O.K. Infinity Comic (2023) #1",
+        "type": "cover"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/stories/227344",
+        "name": "story from Who Is…? M.O.D.O.K. Infinity Comic (2023) #1",
+        "type": "interiorStory"
+      }
+    ],
+    "returned": 2
+  },
+  "events": {
+    "available": 0,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/103120/events",
+    "items": [],
+    "returned": 0
+  }
+}

@@ -40,6 +40,23 @@ import Foundation
         
         return urlStr
     }
+    
+    func onSaleDate(for comic: MarvelComic) -> String {
+        if let onSaleDate = comic.dates.first(where: { $0.type == "onsaleDate" }) {
+            // this could probably be better handled with JSON date decoding
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            if let date = dateFormatter.date(from: onSaleDate.date) {
+                let outputFormatter = DateFormatter()
+                outputFormatter.dateFormat = "MMM d, yyyy"
+                return outputFormatter.string(for: date) ?? onSaleDate.date
+            }
+
+            return onSaleDate.date
+        }
+        return "Unknown"
+    }
 
     func detailBackgroundURL(for character: MarvelCharacter) -> String {
         //http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/detail.jpg
