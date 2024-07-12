@@ -57,8 +57,8 @@ struct ContentView: View {
                     do {
                         try await contentVM.loadPopularCharacters()
                     }
-                        catch(let err) {
-                            print("ERR: \(err.localizedDescription)")
+                    catch(let err) {
+                        print("ERR: \(err.localizedDescription)")
                     }
                 }
             }

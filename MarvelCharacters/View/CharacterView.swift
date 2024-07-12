@@ -46,9 +46,12 @@ struct CharacterView: View {
                             Button {
                             } label: {
                                 VStack(alignment: .center) {
-                                    AsyncImage(url: URL(string: contentVM.thumbnailURL(for: comic)))
-                                        .frame(width: 168, height: 252)
-                                        .scaledToFit()
+                                    AsyncImage(url: URL(string: contentVM.thumbnailURL(for: comic))) { result in
+                                        result.image?
+                                            .resizable()
+                                            .scaledToFit()
+                                    }
+                                    .frame(width: 168, height: 252)
                                     HStack {
                                         Text("\(comic.title)")
                                             .font(.system(size: 14))
@@ -80,8 +83,8 @@ struct CharacterView: View {
             do {
                 try await contentVM.loadComics(for: character.id)
             }
-                catch(let err) {
-                    print("ERR: \(err.localizedDescription)")
+            catch(let err) {
+                print("ERR: \(err.localizedDescription)")
             }
         }
     }
