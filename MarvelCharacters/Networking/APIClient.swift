@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 class APIClient {
-    let baseURL = "https://gateway.marvel.com:443"
-    let apiKey = "9b134f7ef8965bc14e25dafe3004d027"
-    let privateKey = "28655feffa7f74dddeb7e992956adc445cd41aee"
+    private let baseURL = "https://gateway.marvel.com:443"
+    private let apiKey = "9b134f7ef8965bc14e25dafe3004d027"
+    private let privateKey = "28655feffa7f74dddeb7e992956adc445cd41aee"
     
     private var cancellables = Set<AnyCancellable>()
 

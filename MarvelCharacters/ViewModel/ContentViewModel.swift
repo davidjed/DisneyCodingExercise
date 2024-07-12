@@ -26,9 +26,9 @@ import Foundation
     }
     
     func thumbnailURL(for character: MarvelCharacter) -> String {
-        //http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/portrait_xlarge.jpg
+        //http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/standard_fantastic.jpg
         let httpsPath = character.thumbnail.path.replacingOccurrences(of: "http:", with: "https:")
-        let urlStr = httpsPath + "/portrait_xlarge." + character.thumbnail.extension
+        let urlStr = httpsPath + "/standard_fantastic." + character.thumbnail.extension
         
         return urlStr
     }

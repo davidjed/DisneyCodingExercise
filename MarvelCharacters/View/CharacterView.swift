@@ -14,19 +14,26 @@ struct CharacterView: View {
     var body: some View {
         VStack {
             HStack {
-                AsyncImage(url: URL(string: contentVM.detailBackgroundURL(for: character)))
-                    .opacity(0.3)
-                    .scaledToFill()
-                    .frame(height: 500)
+                AsyncImage(url: URL(string: contentVM.detailBackgroundURL(for: character))) { result in
+                    result.image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                .frame(width: 600, height: 500)
+                .opacity(0.3)
+                .padding()
                 
                 VStack(alignment: .leading) {
                     Text(character.name.uppercased())
-                        .font(.largeTitle)
+                        .font(.system(size: 36, weight: .bold))
                     HStack {
                         Image(systemName: "star")
-                            .font(.title3)
+                            .font(.system(size: 20))
+                            .padding(.trailing, -30)
                         Text("Follow Character".uppercased())
-                            .font(.title3)
+                            .font(.system(size: 20))
+                            .padding(.leading, -30)
+                        Spacer()
                     }
                     Spacer()
                 }
@@ -44,7 +51,6 @@ struct CharacterView: View {
                                         .scaledToFit()
                                     HStack {
                                         Text("\(comic.title)")
-                                            .lineLimit(3)
                                             .font(.system(size: 14))
                                         Spacer()
                                     }
@@ -73,7 +79,6 @@ struct CharacterView: View {
         .task {
             do {
                 try await contentVM.loadComics(for: character.id)
-                print("SUCCESS!")
             }
                 catch(let err) {
                     print("ERR: \(err.localizedDescription)")
