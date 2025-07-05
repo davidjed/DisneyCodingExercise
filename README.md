@@ -1,4 +1,4 @@
-# DisneyCodingExercise
+# tvOS Coding Exercise
 
 This coding example displays an initial set of Marvel comic book characters on a tvOS interface; individual characters can be selected to view an initial set of comics associated with that character.
 
